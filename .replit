@@ -1,8 +1,9 @@
 entrypoint = "main.sh"
-modules = ["bash"]
+modules = ["bash", "python-3.11"]
 
 [nix]
 channel = "stable-24_05"
+packages = ["cargo", "libiconv", "libxcrypt", "openssl", "pkg-config", "rustc"]
 
 [deployment]
 run = ["bash", "main.sh"]
