@@ -38,13 +38,10 @@ def decrypt_files():
                     with open(full_path, 'w', encoding='utf-8') as file:
                         file.write(decrypted_content.decode('utf-8'))
                     
-                    print(f"Successfully decrypted: {item}")
                     decrypted_count += 1
                     
                 except Exception as e:
                     print(f"Error processing file {item}: {e}")
-        
-        print(f"\nDecryption complete. {decrypted_count} files processed.")
         
     except FileNotFoundError:
         print("Error: key.key file not found. Please run encrypt.py first to generate a key.")
